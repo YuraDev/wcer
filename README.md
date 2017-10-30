@@ -1,1 +1,1 @@
-test
+Webpack Chrome Extension Reloader
