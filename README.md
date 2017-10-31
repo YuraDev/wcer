@@ -12,11 +12,11 @@ const ReloadPlugin  = require('./reload');
 module.exports = {
 //...
     plugins: [
-      //Only add this plugin to development builds!
       new ReloadPlugin({
         port: 9090,
         manifest: path.join(__dirname, '..', 'src', 'manifest.js')
       })
-    ] // This will remove all "null" values from the array
-    //...
+    ] 
+//...
 }
+```
