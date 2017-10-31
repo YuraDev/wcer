@@ -21,7 +21,7 @@ module.exports = {
     'identity.email'
   ],
   browser_action: {
-    default_title: 'Заголовок',
+    default_title: 'title',
     default_popup: 'pages/popup.html'
   },
   background: {
