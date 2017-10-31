@@ -1,4 +1,4 @@
-Webpack Chrome Extension Reloader
+#Webpack Chrome Extension Reloader
 
 + Creates a manifest.json
 + Reload only the manifest chunk (location.reload)
