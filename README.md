@@ -1,7 +1,22 @@
-#Webpack Chrome Extension Reloader
+# Webpack Chrome Extension Reloader
 
 + Creates a manifest.json
 + Reload only the chunk (location.reload)
 + Restarts the application chrome extension if the file has changed manifest, content_scripts, background.scripts
 + Add background.reload.js if it was not in manifest.js
 + Supports background, content_scripts, devtools, options, popup, tab
+
+```js
+const ReloadPlugin  = require('./reload');
+
+module.exports = {
+//...
+    plugins: [
+      //Only add this plugin to development builds!
+      new ReloadPlugin({
+        port: 9090,
+        manifest: path.join(__dirname, '..', 'src', 'manifest.js')
+      })
+    ] // This will remove all "null" values from the array
+    //...
+}
