@@ -36,12 +36,6 @@ module.exports = {
     matches: ['<all_urls>'],
     all_frames: true
   }],
-  oauth2: {
-    client_id: '120670425664-pk59sqvnb3p5iuupkbu2mj5oe7g0sqca.apps.googleusercontent.com',
-    scopes: [
-      'https://picasaweb.google.com/data/', 'https://www.googleapis.com/auth/userinfo.profile', 'openid', 'email', 'profile'
-    ]
-  },
   content_security_policy: "script-src 'self' 'unsafe-eval'; object-src 'self'",
   web_accessible_resources: [ 'panel.html', 'js/content.js' ]
 }
