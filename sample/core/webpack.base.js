@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ReloadPlugin  = require('./reload')
+const ReloadPlugin  = require('wcer')
 const {cssLoaders, htmlPage} = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
