@@ -7,7 +7,7 @@
 + Supports background, content_scripts, devtools, options, popup, tab
 
 ```js
-const ReloadPlugin  = require('./reload');
+const ReloadPlugin  = require('wcer');
 
 module.exports = {
 //...

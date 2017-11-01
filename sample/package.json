@@ -67,13 +67,5 @@
     "webpack-dev-server": "^2.9.3",
     "webpack-merge": "^4.1.0",
     "webpack-sources": "^1.0.1"
-  },
-  "keywords": [
-    "webpack",
-    "plugin",
-    "chrome",
-    "extension",
-    "hot-reload",
-    "webpack-plugin"
-  ]
+  }
 }
