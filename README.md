@@ -1,4 +1,4 @@
-# Webpack Chrome Extension Reloader
+# Webpack Chrome Extension Reloader [![npm version](https://badge.fury.io/js/wcer.svg)](https://badge.fury.io/js/wcer) [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)]
 
 + Creates a manifest.json
 + Reload only the chunk (location.reload) not all files.
