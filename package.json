@@ -1,9 +1,10 @@
 {
-  "name": "webpack-chrome",
+  "name": "wcer",
   "version": "1.0.0",
-  "description": "lesons",
-  "author": "works.yura@gmail.com",
+  "description": "Webpack Chrome Extension Reloader",
+  "author": "developer.yura@gmail.com",
   "license": "MIT",
+  "private": false,
   "dependencies": {
     "axios": "^0.17.0",
     "chalk": "^2.3.0",
@@ -66,5 +67,13 @@
     "webpack-dev-server": "^2.9.3",
     "webpack-merge": "^4.1.0",
     "webpack-sources": "^1.0.1"
-  }
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "chrome",
+    "extension",
+    "hot-reload",
+    "webpack-plugin"
+  ]
 }
