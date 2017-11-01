@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# temp
+temp
+
+# Backpack build
+build
