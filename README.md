@@ -14,6 +14,7 @@ npm install wcer --save-dev
 yarn add wcer  --dev
 ```
 ## Usage
+Add wcer to the plugins section of your webpack configuration file.
 ```js
 const ChromeReloadPlugin  = require('wcer');
 
