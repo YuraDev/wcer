@@ -29,4 +29,4 @@ module.exports = {
 }
 ```
 ## Example
- + [vue.js Chrome Extension](https://github.com/YuraDev/vue-chrome-extension-template)
+ + [Vue.js Chrome Extension](https://github.com/YuraDev/vue-chrome-extension-template)
