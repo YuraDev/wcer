@@ -1,6 +1,6 @@
 {
   "name": "wcer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Webpack Chrome Extension Reloader",
   "author": "works.yura@gmail.com",
   "license": "MIT",

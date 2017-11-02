@@ -1,6 +1,9 @@
 # IDE
 .vscode
 
+# git
+.gitignore
+
 # dependencies
 node_modules
 
