@@ -13,7 +13,7 @@ npm install wcer --save-dev
 //or
 yarn add wcer  --dev
 ```
-
+## Usage
 ```js
 const ReloadPlugin  = require('wcer');
 
