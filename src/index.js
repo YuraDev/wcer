@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
-const {info, error} = require('../logger')
+const {info, error} = require('.logger')
 const {OPEN, Server} = require('ws')
 const {ConcatSource} = require('webpack-sources')
 
