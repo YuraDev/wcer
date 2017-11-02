@@ -10,7 +10,7 @@
 
 ```bash
 npm install wcer --save-dev
-//or
+// or
 yarn add wcer  --dev
 ```
 ## Usage
@@ -28,3 +28,5 @@ module.exports = {
 //...
 }
 ```
+## Example
+ + [vue.js Chrome Extension](https://github.com/YuraDev/vue-chrome-extension-template)
