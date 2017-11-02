@@ -15,7 +15,7 @@ yarn add wcer  --dev
 ```
 ## Usage
 ```js
-const ReloadPlugin  = require('wcer');
+const ChromeReloadPlugin  = require('wcer');
 
 module.exports = {
 //...

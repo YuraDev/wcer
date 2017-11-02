@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ReloadPlugin  = require('wcer')
+const ChromeReloadPlugin  = require('./wcer')
 const {cssLoaders, htmlPage} = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -94,8 +94,8 @@ module.exports = {
     htmlPage('options', 'options', ['options']),
     htmlPage('background', 'background', ['background']),
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
-    new ReloadPlugin({
-      port: 9090,
+    new ChromeReloadPlugin({
+      port: 9070,
       manifest: path.join(__dirname, '..', 'src', 'manifest.js')
     }),
   ],

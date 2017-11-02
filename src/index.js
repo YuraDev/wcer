@@ -1,26 +1,24 @@
 const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
-const {info, error} = require('.logger')
 const {OPEN, Server} = require('ws')
+const {info, error} = require('./logger')
 const {ConcatSource} = require('webpack-sources')
 
 const _default = { manifest: undefined,  port: 9090 }
 const middleware = fs.readFileSync(path.join(__dirname, 'middleware.js'), 'utf8')
 
 function ReloadPlugin(options) {
-  this.manifestTimestamp = Date.now()
   this.chunkVersions = {}
   this.options = _.merge(_default, options)
 }
 ReloadPlugin.prototype.sourceFactory = (...sources)  => new ConcatSource(...sources)
 ReloadPlugin.prototype.watcher = function(comp, done) {
-  if(this.server || !this.manifest) return done();
+  if(this.server || !this.options.manifest) return done();
   this.server = new Server({port: this.options.port})
   this.server.on('connection', ws => {
     ws.on('message', (data) => info(`Chrome: ${JSON.parse(data).payload}`))
   })
-  console.log('watcher')
   return done()
 }
 
@@ -30,7 +28,7 @@ ReloadPlugin.prototype.compile = function(comp) {
     this.manifest = require(manifest)
     delete require.cache[require.resolve(manifest)]
   } else {
-    error('[ Error: ReloadPlugin - Not found manifest file! ]')
+    error(new Error('[ Error: ReloadPlugin - Not found manifest file! ]'))
   }
 }
 
@@ -50,8 +48,8 @@ ReloadPlugin.prototype.sign = function(type, payload) {
 }
 
 ReloadPlugin.prototype.injector = function(comp, chunks) {
-  if(!this.server || !this.manifest) return;
-  let { background } = this.manifest
+  if(!this.server || !this.manifest) return false;
+  let { background } = this.manifest;
   let assets = chunks.reduce((res, chunk) => {
     let [filename] = chunk.files;
     if (/\.js$/.test(filename)) {
@@ -89,6 +87,7 @@ ReloadPlugin.prototype.triggered = function(comp, done) {
   content_scripts.forEach(content => scripts = scripts.concat(content.js));
   info('[ Starting the Chrome Hot Plugin Reload Server... ]')
   comp.chunks.forEach(function(chunk, name) {
+    console.log(chunk.entryModule.buildTimestamp)
     var hash = this.chunkVersions[chunk.name];
     this.chunkVersions[chunk.name] = chunk.hash;
     if(chunk.hash !== hash) {
@@ -106,7 +105,6 @@ ReloadPlugin.prototype.triggered = function(comp, done) {
     this.manifestTimestamp =  Date.now();
     this.sign('restart', true)
   }
-
   return done()
 }
 

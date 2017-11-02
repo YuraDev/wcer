@@ -5,7 +5,6 @@
 /*  external argument must be provided using it       */
 /* -------------------------------------------------- */
 (function (chrome, window) {
-
   const name = '<%= name %>';
   const wsHost = '<%= WSHost %>';
   const id = parseInt('<%= id %>');
@@ -29,7 +28,6 @@
         runtime.restart()
         send('restart', formatter(timeFormatter(new Date())+' - '+path+' successfully restart'));
       }
-      console.log(id,payload)
       if(type === 'reload' && id === payload.id){
         window.location.reload()
         send('reloaded', formatter(timeFormatter(new Date())+' - '+path+' successfully reloaded'));
@@ -44,6 +42,7 @@
       }, 2000)
     }
   }
+  
   !window.WebpackReloadPlugin ? init() : logger('WebpackReloadPlugin: Socket already started !');
 })(chrome, window);
 /* ----------------------------------------------- */
