@@ -1,9 +1,10 @@
 # Webpack Chrome Extension Reloader [![npm version](https://badge.fury.io/js/wcer.svg)](https://badge.fury.io/js/wcer) 
+> Webpack plugin to enable reloading while developing Chrome extensions.
 
 + Creates a manifest.json
-+ Reload only the chunk (location.reload) not all files.
-+ Restarts the application chrome extension if the file has changed manifest, content_scripts, background.scripts
-+ Add background.reload.js if it was not in manifest.js
++ Reload only the chunk not all files.
++ Restarts the chrome extension if has changed manifest.js, content_scripts.js, background.scripts
++ Add background.reload.js if it was not in manifest.js to work plugin
 + Supports background, content_scripts, devtools, options, popup, tab
 
 ## Installation
