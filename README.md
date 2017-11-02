@@ -4,7 +4,7 @@
 + Creates a manifest.json
 + Reload only the chunk not all files.
 + Restarts the chrome extension if has changed manifest.js, content_scripts.js, background.scripts
-+ Supports background, content_scripts, devtools, options, popup, tab
++ background, content_scripts, devtools, options, popup, tab
 
 ## Installation
 
