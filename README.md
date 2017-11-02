@@ -11,7 +11,7 @@
 ```bash
 npm install wcer --save-dev
 // or
-yarn add wcer  --dev
+yarn add wcer --dev
 ```
 ## Usage
 Add wcer to the plugins section of your webpack configuration file.
