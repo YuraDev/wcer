@@ -21,7 +21,7 @@ const ChromeReloadPlugin  = require('wcer');
 module.exports = {
 //...
     plugins: [
-      new ReloadPlugin({
+      new ChromeReloadPlugin({
         port: 9090,
         manifest: path.join(__dirname, '..', 'src', 'manifest.js')
       })
