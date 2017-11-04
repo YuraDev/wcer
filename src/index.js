@@ -84,7 +84,9 @@ ReloadPlugin.prototype.triggered = function(comp, done) {
   if(!this.server || !this.manifest) return done();
   let { content_scripts, background } = this.manifest;
   let scripts = background.scripts ? background.scripts : [];
-  content_scripts.forEach(content => scripts = scripts.concat(content.js));
+  if(content_scripts && content_scripts.length) {
+    content_scripts.forEach(content => scripts = scripts.concat(content.js));
+  }
   info('[ Starting the Chrome Hot Plugin Reload Server... ]')
   comp.chunks.forEach(function(chunk, name) {
     var hash = this.chunkVersions[chunk.name];
