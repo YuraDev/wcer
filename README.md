@@ -22,7 +22,7 @@ module.exports = {
 //...
     plugins: [
       new ChromeReloadPlugin({
-        port: 9090,
+        port: 9090, //optional, default: 9090
         manifest: path.join(__dirname, '..', 'src', 'manifest.js')
       })
     ] 

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "typeRoots": [
+      "typings/index.d.ts"
+    ],
+    "types": [
+      "node",
+      "chrome"
+    ]
+  },
+  "presets": [
+    "env",
+    {
+      "modules": false
+    }
+  ],
+  "files": [
+    "typings/index.d.ts"
+  ],
+  "include": [
+    "src/**/*",
+    "specs/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

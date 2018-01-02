@@ -1,15 +1,21 @@
 {
   "name": "wcer",
-  "version": "0.0.8",
-  "description": "Webpack Chrome Extension Reloader",
-  "author": "works.yura@gmail.com",
-  "license": "MIT",
+  "version": "1.0.2",
   "private": false,
-  "main": "src/index.js",
+  "description": "Watch for changes and force the reload of the chrome extension",
+  "main": "build/index.js",
+  "types": "typings/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git@github.com:YuraDev/wcer.git"
+    "url": "git://github.com/YuraDev/wcer.git"
   },
+  "scripts": {
+    "pro": "webpack",
+    "dev": "webpack --watch",
+    "client": "webpack --color --config client/webpack.config.js"
+  },
+  "author": "Zaporozhets Yura <works.yura@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/YuraDev/wcer/issues"
   },
@@ -19,12 +25,25 @@
     "plugin",
     "chrome",
     "extension",
-    "hot-reload",
-    "webpack-plugin"
+    "hot-reload"
   ],
-  "devDependencies": {
+  "dependencies": {
+    "chalk": "^2.3.0",
     "lodash": "^4.17.4",
-    "webpack-sources": "^1.0.1",
-    "ws": "^3.2.0"
+    "webpack-sources": "^1.1.0",
+    "websocket-driver": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/chrome": "^0.0.49",
+    "@types/lodash": "^4.14.65",
+    "@types/node": "^8.5.1",
+    "@types/webpack": "^3.0.13",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.3.7",
+    "tslint": "^4.5.1",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }
