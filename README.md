@@ -1,5 +1,4 @@
-# Webpack Chrome Extension Reloader [![npm version](https://badge.fury.io/js/wcer.svg)](https://badge.fury.io/js/wcer) 
-> Webpack plugin to enable reloading while developing Chrome extensions.
+# Webpack Chrome Extension Reloader [![npm version](https://badge.fury.io/js/wcer.svg)](https://badge.fury.io/js/wcer)
 
 ![Webpack Chrome Extension Reloade images](/docs/images/mini.jpg)
 
